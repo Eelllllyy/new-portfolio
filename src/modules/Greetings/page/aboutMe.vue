@@ -1,13 +1,17 @@
 <template>
-  <section>
+    <section>
     <div class="greetings-container">
       <h1 style="--i:0">Привет!</h1>
       <h1 style="--i:2">Меня зовут Элина</h1>
       <h1 style="--i:1">Я Frontend разработчик</h1>
     </div>
+  <button class="btn" @click="$router.push('/projects')">Отправиться в космические путешествия</button>
   </section>
+  <starCards/>
 </template>
 <script setup>
+// import projectCards from '@/modules/Cards/page/projectCards.vue';
+import starCards from '@/modules/Sky/components/theStar.vue';
 </script>
 <style scoped>
 @font-face {
@@ -17,10 +21,12 @@
 section{
   width: 100vw;
   height: 100vh;
-  background-color: rgb(3, 3, 68);
+  background: linear-gradient(180deg, rgb(5, 15, 47) 12%, rgb(8, 24, 62), rgb(0, 0, 0));
+  background-attachment: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 .greetings-container{
   width: 50vw;
@@ -32,9 +38,9 @@ section{
   position: relative;
   overflow: hidden;
   font-family: 'CrystalC';
-  text-shadow: 1px 2px 10px rgb(190, 14, 190);
+  text-shadow: 1px 2px 10px rgb(255 254 232);
   line-height: 116px;
-  color:rgb(3, 3, 68);
+  color:rgb(5 15 47);
 }
 .greetings-container::before{
   content: '';
@@ -42,24 +48,23 @@ section{
   width: 3vw;
   height: 300%;
   transition: 1s;
-  box-shadow: 100px 0px 400px rgb(190, 14, 190);
-  animation: boxAnimate 8s linear infinite;
+  box-shadow: 100px 0px 400px rgb(255 255 255);
+  animation: boxAnimate 15s linear infinite;
 }
 .greetings-container::after{
   content: '';
   position: absolute;
   inset: 20px;
-  background: rgb(3, 3, 68);
+  background: #051230;
   transition: 0.5s;
 }
 h1{
   z-index: 2;
-  font-size: 4em;
+  font-size: 5em;
   animation: textAnimate 3s linear infinite;
   animation-delay: calc(1.4s * var(--i));
   opacity: 0.7;
 }
-
 @keyframes boxAnimate{
   0%{
     transform: rotate(0deg);
@@ -77,6 +82,29 @@ h1{
   }
   100%{
     opacity: 1;
+  }
+}
+.btn{
+  margin-top: 5vw;
+  padding: 30px;
+  border: 10px solid rgb(24 35 63);
+  font: 500 4em / 30px 'CrystalC';
+  color: rgb(129 198 219);
+  cursor: pointer;
+  background: rgb(24 35 63);
+  color: rgb(236 255 237);
+  text-shadow: 0 0 10px rgb(247, 248, 250);
+  box-shadow:  0 0 67px #cdcfdd;
+  animation: buttonAnimate 2s linear infinite;
+  animation-direction: alternate;
+  animation-delay: 2s
+}
+@keyframes buttonAnimate{
+  from {
+    transform: scale(1)
+  }
+  to {
+    transform: scale(0.9)
   }
 }
 </style>
