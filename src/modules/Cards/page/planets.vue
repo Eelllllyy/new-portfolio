@@ -218,6 +218,11 @@ main{
   background: linear-gradient(270deg, rgb(10, 10, 0), rgb(3, 12, 34));
   position: relative;
   overflow: hidden;
+  animation: ani 2s forwards;
+}
+@keyframes ani {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
 }
 img{
   width: 100%;
@@ -285,7 +290,7 @@ p{
   width: 100px;
   height: 100px;
   position: absolute;
-  animation: mercuryAction 45s linear infinite;
+  animation: mercuryAction 39s linear infinite;
   filter: drop-shadow(0 0 25px rgb(223, 223, 223));
   cursor: pointer;
 }
@@ -294,7 +299,7 @@ p{
   width: 150px;
   height: 150px;
   position: absolute;
-  animation: veneraAction 55s linear infinite;
+  animation: veneraAction 47s linear infinite;
   filter: drop-shadow(0 0 25px rgb(231, 231, 231));
   cursor: pointer;
 }
@@ -303,7 +308,7 @@ p{
   width: 250px;
   height: 250px;
   position: absolute;
-  animation: earthAction 75s linear infinite;
+  animation: earthAction 70s linear infinite;
   filter: drop-shadow(0 0 25px rgb(233, 233, 233));
   cursor: pointer;
 }
@@ -312,14 +317,14 @@ p{
   width: 120px;
   height: 120px;
   position: absolute;
-  animation: marsAction 90s linear infinite;
+  animation: marsAction 100s linear infinite;
   filter: drop-shadow(0 0 25px rgb(223, 223, 223));
   cursor: pointer;
 }
 @keyframes earthAction{
   0% {
     right: 55%;
-    top: 0; 
+    top: -39%; 
     transform: rotate(-360deg);
   }
   25%{
@@ -343,7 +348,7 @@ p{
 @keyframes marsAction{
   0% {
     right: 72%;
-    top: -13%; 
+    top: -11%; 
     transform: rotate(360deg);
   }
   25%{
@@ -367,7 +372,7 @@ p{
 @keyframes mercuryAction{
   0% {
     right: 30%;
-    top: -3%; 
+    top: -10%; 
     transform: rotate(-360deg);
   }
   25%{
@@ -391,7 +396,7 @@ p{
 @keyframes veneraAction{
   0% {
     right: 41%;
-    top: -15%; 
+    top: -14%; 
     transform: rotate(360deg);
   }
   25%{

@@ -10,6 +10,11 @@ const routes = [
     path: '/projects',
     name: 'Projects',
     component: () => import('@/modules/Cards/page/planets.vue')
+  },
+  {
+    path: '/milkyWay',
+    name: 'MilkyWay',
+    component: () => import('@/modules/MilkyWay/page/milkyWay.vue')
   }
 ]
 

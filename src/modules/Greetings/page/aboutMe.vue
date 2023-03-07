@@ -1,24 +1,29 @@
 <template>
-    <section>
+    <section class="greetings-section">
     <div class="greetings-container">
       <h1 style="--i:0">Привет!</h1>
       <h1 style="--i:2">Меня зовут Элина</h1>
       <h1 style="--i:1">Я Frontend разработчик</h1>
     </div>
-  <button class="btn" @click="$router.push('/projects')">Отправиться в космические путешествия</button>
+  <button class="btn" @click="openModal = !openModal">Отправиться в космические путешествия</button>
   </section>
   <starCards/>
+  <div v-if="openModal" class="dialog-modal">
+  <MilkyWay/>
+  </div>
 </template>
 <script setup>
-// import projectCards from '@/modules/Cards/page/projectCards.vue';
+import { ref } from 'vue';
 import starCards from '@/modules/Sky/components/theStar.vue';
+import MilkyWay from '@/modules/MilkyWay/page/milkyWay.vue';
+const openModal = ref(false)
 </script>
 <style scoped>
 @font-face {
   font-family: 'CrystalC';
   src: url(@/modules/Greetings/assets/fonts/CrystalC.otf)
 }
-section{
+.greetings-section{
   width: 100vw;
   height: 100vh;
   background: linear-gradient(180deg, rgb(5, 15, 47) 12%, rgb(8, 24, 62), rgb(0, 0, 0));
@@ -28,6 +33,7 @@ section{
   align-items: center;
   flex-direction: column;
 }
+
 .greetings-container{
   width: 50vw;
   height: 50vh;
@@ -97,7 +103,7 @@ h1{
   box-shadow:  0 0 67px #cdcfdd;
   animation: buttonAnimate 2s linear infinite;
   animation-direction: alternate;
-  animation-delay: 2s
+  animation-delay: 1s
 }
 @keyframes buttonAnimate{
   from {
@@ -106,5 +112,18 @@ h1{
   to {
     transform: scale(0.9)
   }
+}
+.dialog-modal{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+
 }
 </style>
