@@ -27,11 +27,11 @@
       <div class="cross">
         <button class="cross-button" @click="nasaVis = !nasaVis"></button>
       </div>
-      <div class="card-content">
+      <div>
         <h1 class="title">{{ nasaPortal.title }}</h1>
       <p>{{ nasaPortal.description }}</p>
       <p class="text-realize">{{ nasaPortal.realization }}</p>
-      <a :href="nasaPortal.git" class="text-git">{{ nasaPortal.git }}
+      <a :href="nasaPortal.git"> <font-awesome-icon icon="fa-brands fa-github" /> <h2 class="text-git">Git</h2>
       </a>
       </div>
         <a :href="nasaPortal.git"><img :src='nasaPortal.image'></a>
@@ -42,11 +42,11 @@
       <div class="cross">
         <button class="cross-button" @click="minosVis = !minosVis"></button>
       </div>
-      <div class="card-content">
+      <div>
         <h1 class="title">{{ minos.title }}</h1>
       <p>{{ minos.description }}</p>
       <p class="text-realize">{{ minos.realization }}</p>
-      <a :href="minos.git" class="text-git">{{ minos.git }}
+      <a :href="minos.git"> <font-awesome-icon icon="fa-brands fa-github" /> <h2 class="text-git">Git</h2>
       </a>
       </div>
       <a :href="minos.git"><img :src='minos.image'></a>
@@ -57,11 +57,11 @@
       <div class="cross">
         <button class="cross-button" @click="airbnbVis = !airbnbVis"></button>
       </div>
-      <div class="card-content">
+      <div>
         <h1 class="title">{{ airbnClone.title }}</h1>
       <p>{{ airbnClone.description }}</p>
       <p class="text-realize">{{ airbnClone.realization }}</p>
-      <a :href="airbnClone.git" class="text-git">{{ airbnClone.git }}
+      <a :href="airbnClone.git"><font-awesome-icon icon="fa-brands fa-github" /> <h2 class="text-git">Git</h2>
       </a>
       </div>
       <a :href="airbnClone.git"><img :src='airbnClone.image'></a>
@@ -72,51 +72,41 @@
       <div class="cross">
         <button class="cross-button" @click="cardsVis = !cardsVis"></button>
       </div>
-      <div class="card-content">
+      <div>
         <h1 class="title">{{ cards.title }}</h1>
       <p>{{ cards.description }}</p>
       <p class="text-realize">{{ cards.realization }}</p>
-      <a :href="cards.git" class="text-git">{{ cards.git }}
+      <a :href="cards.git" ><font-awesome-icon icon="fa-brands fa-github" /> <h2 class="text-git">Git</h2>
       </a>
       </div>
       <a :href="cards.git"><img :src='cards.image'></a>
     </article>
 </transition>
 <transition name="fade">
-    <article class="card" v-if="userVis">
+    <article class="card-about-me" v-if="userVis">
       <div class="cross">
         <button class="cross-button" @click="userVis = !userVis"></button>
       </div>
       <div class="card-content">
-        <ul class="ident">
-          <li><a href="https://t.me/eelllllyy">
-             <font-awesome-icon icon="fa-brands fa-telegram"/> Telegram
-          </a></li>
-          <li><a href="https://hh.ru/resume/222787aaff0bb781a30039ed1f534877545331"><span class="hh">hh</span> HeadHunter</a></li>
-          <li><a href="https://github.com/Eelllllyy">
-            <font-awesome-icon icon="fa-brands fa-github" /> GitHub
-          </a></li>
-          <li><a href="https://www.linkedin.com/in/elina-rezenkova-743b9b258/">
-            <font-awesome-icon icon="fa-brands fa-linkedin" /> Linkedin
-          </a></li>
-          <li><a href="mailto:r-elina-r@yandex.ru">
-            <font-awesome-icon icon="fa-regular fa-envelope" /> E-mail
-          </a> </li>
-        </ul>
+        <div class="ident">
+          <a href="https://t.me/eelllllyy">
+             <font-awesome-icon icon="fa-brands fa-telegram"/>
+          </a>
+          <a href="https://hh.ru/resume/222787aaff0bb781a30039ed1f534877545331">HH</a>
+          <a href="https://github.com/Eelllllyy">
+            <font-awesome-icon icon="fa-brands fa-github" />
+          </a>
+          <a href="https://www.linkedin.com/in/elina-rezenkova-743b9b258/">
+            <font-awesome-icon icon="fa-brands fa-linkedin" /> 
+          </a>
+          <a href="mailto:r-elina-r@yandex.ru">
+            <font-awesome-icon icon="fa-regular fa-envelope" />
+          </a> 
+        </div>
+        <img src='@/modules/Cards/assets/avatar.jpeg' class="my-image">
       </div>
-      <img src='@/modules/Cards/assets/avatar.jpeg'>
     </article>
 </transition>
-    <!-- <article class="card" v-for="card in arr">
-      <div class="card-content">
-        <h1 class="title">{{ card.title }}</h1>
-      <p>{{ card.description }}</p>
-      <p class="text-realize">{{ card.realization }}</p>
-      <a :href="card.git" class="text-git">{{ card.git }}
-      </a>
-      </div>
-      <img :src='card.image'>
-    </article> -->
   </main>
 </template>
 <script setup>
@@ -226,14 +216,15 @@ main{
 }
 img{
   width: 100%;
+  height: 100%;
   margin: 15px 0;
-  box-shadow: 0 0 40px rgb(255, 124, 17);
+  box-shadow: -6px 6px 10px rgb(15 15 15 / 56%);;
 }
 .card{
   position: fixed;
   top:0;
   right: 0;
-  width:20%;
+  width:30%;
   display: flex;
   flex-direction: column;
   font-family: 'CotlinC';
@@ -264,8 +255,11 @@ p{
 .text-realize{
   padding: 15px 0;
 }
-.text-git{
+a{
   text-decoration: none;
+  color:black;
+  /* font-size:10%; */
+  font-family: 'CotlinC';
 }
 .galaxy{
   position: fixed;
@@ -291,7 +285,7 @@ p{
   height: 100px;
   position: absolute;
   animation: mercuryAction 39s linear infinite;
-  filter: drop-shadow(0 0 25px rgb(223, 223, 223));
+  filter: drop-shadow(0 0 15px rgb(223, 223, 223));
   cursor: pointer;
 }
 .venera{
@@ -300,7 +294,7 @@ p{
   height: 150px;
   position: absolute;
   animation: veneraAction 47s linear infinite;
-  filter: drop-shadow(0 0 25px rgb(231, 231, 231));
+  filter: drop-shadow(0 0 15px rgb(231, 231, 231));
   cursor: pointer;
 }
 .earth{
@@ -309,7 +303,7 @@ p{
   height: 250px;
   position: absolute;
   animation: earthAction 70s linear infinite;
-  filter: drop-shadow(0 0 25px rgb(233, 233, 233));
+  filter: drop-shadow(0 0 15px rgb(233, 233, 233));
   cursor: pointer;
 }
 .mars{
@@ -318,7 +312,7 @@ p{
   height: 120px;
   position: absolute;
   animation: marsAction 100s linear infinite;
-  filter: drop-shadow(0 0 25px rgb(223, 223, 223));
+  filter: drop-shadow(0 0 15px rgb(223, 223, 223));
   cursor: pointer;
 }
 @keyframes earthAction{
@@ -348,7 +342,7 @@ p{
 @keyframes marsAction{
   0% {
     right: 72%;
-    top: -11%; 
+    top: -23%; 
     transform: rotate(360deg);
   }
   25%{
@@ -396,7 +390,7 @@ p{
 @keyframes veneraAction{
   0% {
     right: 41%;
-    top: -14%; 
+    top: -20%; 
     transform: rotate(360deg);
   }
   25%{
@@ -493,5 +487,35 @@ p{
     opacity: 0.3;
     transform: scale(0.7)
   }
+}
+.text-git{
+  display: inline-block;
+}
+.card-content{
+  display: flex;
+  justify-content: space-between;
+}
+.ident{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.my-image{
+  width: 70%;
+  height: 70%;
+}
+.card-about-me{
+  width: 26%;
+  position: fixed;
+  top:0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: 'CotlinC';
+  padding: 30px;
+  margin: 30px;
+  color: black;
+  background-color:rgba(255, 255, 255, 0.781);
+  box-shadow: 0 0 10px rgb(179, 179, 179);
 }
 </style>

@@ -37,17 +37,21 @@
 }
 .modal-section{
   position: relative;
-  width: 51vw;
-  height: 66vh;
+  width: 69vw;
+  height: 72vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: rgb(4, 15, 43);
+  background: linear-gradient(180deg, rgb(16 31 68) 0%, rgb(0 0 0) 100%);
   z-index: 5;
-  box-shadow: 0 0 62px #ff7e13;
+  box-shadow: 0 0 16px #cecece;
+  animation: ani 1s forwards;
 }
-
+@keyframes ani {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
 .text-decoration {
   font-family: 'CrystalC';
   text-align: center;
@@ -56,9 +60,10 @@
 h2{
   font-weight: 300;
   letter-spacing: 10px;
-  font-size: 4vw;
-  margin-bottom: 10%;
-  color: white;
+  font-size: 5vw;
+  margin-bottom: 19%;
+  color: rgb(6, 15, 39);
+  text-shadow: 0 0 10px #eaf1f1;
 }
 .loader{
   position: relative;
@@ -72,13 +77,13 @@ h2{
   display: block;
   width: 20px;
   height: 20px;
-  background: #d85600;
-  box-shadow: 0 0 5px #d85600,
-              0 0 10px #d85600,
-              0 0 15px #d85600,
-              0 0 20px #d85600,
-              0 0 25px #d85600,
-              0 0 30px #d85600;
+  background: #fff;
+  box-shadow: 0 0 5px #fff,
+              0 0 10px #fff,
+              0 0 15px #fff,
+              0 0 20px #fff,
+              0 0 25px #fff,
+              0 0 30px #fff;
   margin:20px 10px;
   transform: scale(0.1);
   border-radius: 50%;
