@@ -28,9 +28,9 @@
         <h1 class="title">{{ nasaPortal.title }}</h1>
         <p>{{ nasaPortal.description }}</p>
         <p class="text-realize">{{ nasaPortal.realization }}</p>
-        <a :href="nasaPortal.git"> <font-awesome-icon icon="fa-brands fa-github" size="2x"/> <h2 class="text-git">GitHub</h2></a>
+        <a :href="nasaPortal.git" target="_blank"> <font-awesome-icon icon="fa-brands fa-github" size="2x"/> <h2 class="text-git">GitHub</h2></a>
       </div>
-      <a :href="nasaPortal.git"><img :src='nasaPortal.image'></a>
+      <a :href="nasaPortal.git" target="_blank"><img :src='nasaPortal.image'></a>
     </article>
 </transition>
   <transition name="fade">
@@ -42,9 +42,9 @@
         <h1 class="title">{{ minos.title }}</h1>
         <p>{{ minos.description }}</p>
         <p class="text-realize">{{ minos.realization }}</p>
-        <a :href="minos.git"> <font-awesome-icon icon="fa-brands fa-github" size="2x"/> <h2 class="text-git">GitHub</h2></a>
+        <a :href="minos.git" target="_blank"> <font-awesome-icon icon="fa-brands fa-github" size="2x"/> <h2 class="text-git">GitHub</h2></a>
       </div>
-      <a :href="minos.git"><img :src='minos.image'></a>
+      <a :href="minos.git" target="_blank"><img :src='minos.image'></a>
     </article>
   </transition>
   <transition name="fade">
@@ -56,9 +56,9 @@
         <h1 class="title">{{ airbnClone.title }}</h1>
         <p>{{ airbnClone.description }}</p>
         <p class="text-realize">{{ airbnClone.realization }}</p>
-        <a :href="airbnClone.git"><font-awesome-icon icon="fa-brands fa-github" size="2x" /> <h2 class="text-git">GitHub</h2></a>
+        <a :href="airbnClone.git" target="_blank"><font-awesome-icon icon="fa-brands fa-github" size="2x" /> <h2 class="text-git">GitHub</h2></a>
       </div>
-      <a :href="airbnClone.git"><img :src='airbnClone.image'></a>
+      <a :href="airbnClone.git" target="_blank"><img :src='airbnClone.image'></a>
     </article>
   </transition>
   <transition name="fade">
@@ -70,9 +70,9 @@
         <h1 class="title">{{ cards.title }}</h1>
         <p>{{ cards.description }}</p>
         <p class="text-realize">{{ cards.realization }}</p>
-        <a :href="cards.git" ><font-awesome-icon icon="fa-brands fa-github" size="2x"/> <h2 class="text-git">GitHub</h2></a>
+        <a :href="cards.git" target="_blank"><font-awesome-icon icon="fa-brands fa-github" size="2x"/> <h2 class="text-git">GitHub</h2></a>
       </div>
-      <a :href="cards.git"><img :src='cards.image'></a>
+      <a :href="cards.git" target="_blank"><img :src='cards.image'></a>
     </article>
   </transition>
   <transition name="fade">
@@ -82,17 +82,17 @@
       </div>
       <div class="card-content">
         <div class="ident">
-          <a href="https://t.me/eelllllyy">
+          <a href="https://t.me/eelllllyy" target="_blank">
              <font-awesome-icon icon="fa-brands fa-telegram" size="2x"/>
           </a>
-          <a href="https://hh.ru/resume/222787aaff0bb781a30039ed1f534877545331" class="hh">HH</a>
-          <a href="https://github.com/Eelllllyy">
+          <a href="https://hh.ru/resume/222787aaff0bb781a30039ed1f534877545331" class="hh" target="_blank">HH</a>
+          <a href="https://github.com/Eelllllyy" target="_blank">
             <font-awesome-icon icon="fa-brands fa-github" size="2x"/>
           </a>
-          <a href="https://www.linkedin.com/in/elina-rezenkova-743b9b258/">
+          <a href="https://www.linkedin.com/in/elina-rezenkova-743b9b258/" target="_blank">
             <font-awesome-icon icon="fa-brands fa-linkedin" size="2x"/> 
           </a>
-          <a href="mailto:r-elina-r@yandex.ru">
+          <a href="mailto:r-elina-r@yandex.ru" target="_blank">
             <font-awesome-icon icon="fa-regular fa-envelope" size="2x"/>
           </a> 
         </div>
@@ -191,7 +191,7 @@ const arr = [nasaPortal, minos, airbnClone, cards]
 <style scoped>
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.7s ease;
+  transition: opacity 0.6s ease;
 }
 .fade-enter-from,
 .fade-leave-to {
@@ -598,22 +598,22 @@ a{
   .earth{
     top: 50%;
     right: 84%;
-    animation: galaxyRotate-73691448 45s linear infinite
+    animation: galaxyRotate 45s linear infinite
   }
   .venera{
     top: 16%;
     right: 54%;
-    animation: galaxyRotate-73691448 45s linear infinite
+    animation: galaxyRotate 45s linear infinite
   }
   .mercury{
     top: 25%;
     right: 1%;
-    animation: galaxyRotate-73691448 45s linear infinite
+    animation: galaxyRotate 45s linear infinite
   }
   .mars{
     top: 89%;
     right: 34%;
-    animation: galaxyRotate-73691448 45s linear infinite
+    animation: galaxyRotate 45s linear infinite
   }
   .five{
     top: 33vw;
