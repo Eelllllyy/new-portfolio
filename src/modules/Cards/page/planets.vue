@@ -13,7 +13,6 @@
     <div class="star eleven"></div>
     <div class="star twelve"></div>
 
-
     <article class="galaxy">
       <div class="galaxy-content" @click = "openPlanet('sun')">
       </div>
@@ -279,6 +278,7 @@ a{
   animation: galaxyRotate 45s linear infinite;
   cursor: pointer;
 }
+
 .mercury{
   background: url(@/modules/Cards/assets/mercury.png) center center / cover;
   width: 100px;
@@ -517,5 +517,142 @@ a{
   color: black;
   background-color:rgba(255, 255, 255, 0.781);
   box-shadow: 0 0 10px rgb(179, 179, 179);
+}
+@media(max-width:1670px){
+  .galaxy-content{
+    width: 540px;
+    height: 540px;
+  }
+  .earth{
+    width: 200px;
+    height: 200px;
+  }
+  .venera{
+    width: 140px;
+    height: 140px;
+  }
+  .mars{
+    width: 115px;
+    height: 115px;
+  }
+  @keyframes marsAction{
+  0% {
+    right: 72%;
+    top: -23%; 
+    transform: rotate(360deg);
+  }
+  25%{
+    right: 82%;
+    top: 25%;
+  }
+  50%{
+    right: 84%; 
+    top: 50%;
+  }
+  75%{
+    right: 82%; 
+    top: 75%;
+  }
+  100%{ 
+    right: 72%; 
+    top: 100%;
+    transform: rotate(0);
+  }
+}
+}
+@media(max-width: 1250px){
+  .galaxy-content{
+    width: 430px;
+    height: 430px;
+}
+  .earth{
+    width: 170px;
+    height: 170px;
+  animation: earthAction 62s linear infinite;
+}
+  .venera{
+    width: 120px;
+    height: 120px;
+    animation: veneraAction 37s linear infinite;
+  }
+  .mercury{
+    width: 90px;
+    height: 90px;
+    animation: mercuryAction 27s linear infinite;
+  }
+  .mars{
+    width: 105px;
+    height: 105px;
+}
+}
+@media(max-width: 900px){
+  .galaxy-content{
+    width: 430px;
+    height: 430px;
+}
+  .earth{
+    top: 50%;
+    right: 84%;
+    animation: galaxyRotate-73691448 45s linear infinite
+}
+  .venera{
+    top: 16%;
+    right: 54%;
+    animation: galaxyRotate-73691448 45s linear infinite
+  }
+  .mercury{
+    top: 25%;
+    right: 1%;
+    animation: galaxyRotate-73691448 45s linear infinite
+  }
+  .mars{
+    top: 94%;
+    right: 34%;
+    animation: galaxyRotate-73691448 45s linear infinite
+}
+}
+@media(max-width: 500px){
+  .galaxy-content{
+    width: 430px;
+    height: 430px;
+}
+  .earth{
+    top: 62%;
+    right: 82%;
+}
+  .venera{
+    top: 11%;
+    right: 54%;
+  }
+  .mercury{
+    top: 25%;
+    right: 0%;
+  }
+  .mars{
+    top: 94%;
+    right: 25%;
+}
+}
+@media(max-width: 400px){
+  .galaxy-content {
+    width: 289px;
+    height: 289px;
+}
+.earth{
+  top: 62%;
+  right: 74%;
+}
+  .venera{
+    top: 6%;
+    right: 55%;
+  }
+  .mercury{
+    top: 20%;
+    right: 0%;
+  }
+  .mars{
+    top: 91%;
+    right: 25%;
+}
 }
 </style>
