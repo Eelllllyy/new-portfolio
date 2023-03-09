@@ -47,6 +47,7 @@ const openModal = ref(false)
   text-shadow: 1px 2px 10px rgb(255 254 232);
   line-height: 116px;
   color:rgb(5 15 47);
+  z-index: 2;
 }
 .greetings-container::before{
   content: '';
@@ -130,6 +131,12 @@ h1{
     font-size:3em ;
   }
 }
+@media(max-width: 1200px){
+  .btn{
+    font: 500 3em / 50px 'CrystalC';
+    padding: 15px
+  }
+}
 @media(max-width:900px){
   h1{
     font-size:4em ;
@@ -138,9 +145,13 @@ h1{
     width: 90vw;
   }
 }
-@media(max-width: 500px){
+@media(max-width: 590px){
   h1{
     font-size:2em ;
+  }
+  .btn{
+    margin-top: 13vw;
+    font-size:1.3em ;
   }
 }
 </style>

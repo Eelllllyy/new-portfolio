@@ -87,5 +87,71 @@
     transform: rotate(0);
   }
 }
-
+@media(max-width: 900px){
+  .two{
+    top: 19vw;
+    right: 44vh;
+  }
+  .three{
+    top: 17vw;
+    left: 8vh;
+  }
+  .one{
+    top: 1vw;
+    left: 16vh;
+  }
+  .four{
+    top: 16vw;
+    left: 44vh;
+  }
+  .five{
+    right: 3vh;
+  }
+  .seven{
+    top: 18vw;
+    right: 9vw;
+  }
+  .ten{
+    top: 2vw;
+    right: 33vw;
+  }
+  .eight{
+    top: 5vw;
+    left: 44vw;
+  }
+}
+@media(max-width: 590px){
+  .star{
+    width: 15px;
+    height: 15px;
+  }
+  .two{
+    top: 27vw;
+    right: 40vh;
+  }
+  .one{
+    top: 25vw;
+    left: 31vh;
+  }
+  .four{
+    top: 21vw;
+    left: 41vh;
+  }
+  .five{
+    top: 26vw;
+    right: 28vh;
+  }
+  .six{
+    top: 3vw;
+    right: 3vh;
+  }
+  .seven{
+    top: 14vw;
+    right: 45vw;
+  }
+  .ten{
+    top: 2vw;
+    right: 31vw;
+  }
+}
 </style>
