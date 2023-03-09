@@ -56,13 +56,12 @@
   font-family: 'CrystalC';
   text-align: center;
 }
-
 h2{
   font-weight: 300;
   letter-spacing: 10px;
   font-size: 5vw;
   margin-bottom: 19%;
-  color: rgb(6, 15, 39);
+  color: rgb(255, 255, 255);
   text-shadow: 0 0 10px #eaf1f1;
 }
 .loader{
@@ -122,5 +121,20 @@ h2{
   to {
     transform: scale(0.8)
   }
+}
+@media(max-width: 600px){
+   .modal-section{
+    width: 95%;
+   }
+   .dot{
+    width: 14px;
+    height: 14px;
+   }
+   .btn{
+    font-size: 7vw;
+   }
+   h2{
+    font-size: 7vw;
+   }
 }
 </style>

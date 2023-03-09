@@ -12,10 +12,8 @@
     <div class="star ten"></div>
     <div class="star eleven"></div>
     <div class="star twelve"></div>
-
     <article class="galaxy">
-      <div class="galaxy-content" @click = "openPlanet('sun')">
-      </div>
+      <div class="galaxy-content" @click = "openPlanet('sun')"></div>
     </article>
     <div class="mercury" @click = "openPlanet('mercury')"></div>
     <div class="venera" @click = "openPlanet('venera')"></div>
@@ -28,60 +26,56 @@
       </div>
       <div>
         <h1 class="title">{{ nasaPortal.title }}</h1>
-      <p>{{ nasaPortal.description }}</p>
-      <p class="text-realize">{{ nasaPortal.realization }}</p>
-      <a :href="nasaPortal.git"> <font-awesome-icon icon="fa-brands fa-github" /> <h2 class="text-git">Git</h2>
-      </a>
+        <p>{{ nasaPortal.description }}</p>
+        <p class="text-realize">{{ nasaPortal.realization }}</p>
+        <a :href="nasaPortal.git"> <font-awesome-icon icon="fa-brands fa-github" size="2x"/> <h2 class="text-git">GitHub</h2></a>
       </div>
-        <a :href="nasaPortal.git"><img :src='nasaPortal.image'></a>
+      <a :href="nasaPortal.git"><img :src='nasaPortal.image'></a>
     </article>
 </transition>
-<transition name="fade">
+  <transition name="fade">
     <article class="card" v-if="minosVis">
       <div class="cross">
         <button class="cross-button" @click="minosVis = !minosVis"></button>
       </div>
       <div>
         <h1 class="title">{{ minos.title }}</h1>
-      <p>{{ minos.description }}</p>
-      <p class="text-realize">{{ minos.realization }}</p>
-      <a :href="minos.git"> <font-awesome-icon icon="fa-brands fa-github" /> <h2 class="text-git">Git</h2>
-      </a>
+        <p>{{ minos.description }}</p>
+        <p class="text-realize">{{ minos.realization }}</p>
+        <a :href="minos.git"> <font-awesome-icon icon="fa-brands fa-github" size="2x"/> <h2 class="text-git">GitHub</h2></a>
       </div>
       <a :href="minos.git"><img :src='minos.image'></a>
     </article>
-</transition>
-<transition name="fade">
+  </transition>
+  <transition name="fade">
     <article class="card" v-if="airbnbVis">
       <div class="cross">
         <button class="cross-button" @click="airbnbVis = !airbnbVis"></button>
       </div>
       <div>
         <h1 class="title">{{ airbnClone.title }}</h1>
-      <p>{{ airbnClone.description }}</p>
-      <p class="text-realize">{{ airbnClone.realization }}</p>
-      <a :href="airbnClone.git"><font-awesome-icon icon="fa-brands fa-github" /> <h2 class="text-git">Git</h2>
-      </a>
+        <p>{{ airbnClone.description }}</p>
+        <p class="text-realize">{{ airbnClone.realization }}</p>
+        <a :href="airbnClone.git"><font-awesome-icon icon="fa-brands fa-github" size="2x" /> <h2 class="text-git">GitHub</h2></a>
       </div>
       <a :href="airbnClone.git"><img :src='airbnClone.image'></a>
     </article>
-</transition>
-<transition name="fade">
+  </transition>
+  <transition name="fade">
     <article class="card" v-if="cardsVis">
       <div class="cross">
         <button class="cross-button" @click="cardsVis = !cardsVis"></button>
       </div>
       <div>
         <h1 class="title">{{ cards.title }}</h1>
-      <p>{{ cards.description }}</p>
-      <p class="text-realize">{{ cards.realization }}</p>
-      <a :href="cards.git" ><font-awesome-icon icon="fa-brands fa-github" /> <h2 class="text-git">Git</h2>
-      </a>
+        <p>{{ cards.description }}</p>
+        <p class="text-realize">{{ cards.realization }}</p>
+        <a :href="cards.git" ><font-awesome-icon icon="fa-brands fa-github" size="2x"/> <h2 class="text-git">GitHub</h2></a>
       </div>
       <a :href="cards.git"><img :src='cards.image'></a>
     </article>
-</transition>
-<transition name="fade">
+  </transition>
+  <transition name="fade">
     <article class="card-about-me" v-if="userVis">
       <div class="cross">
         <button class="cross-button" @click="userVis = !userVis"></button>
@@ -89,33 +83,32 @@
       <div class="card-content">
         <div class="ident">
           <a href="https://t.me/eelllllyy">
-             <font-awesome-icon icon="fa-brands fa-telegram"/>
+             <font-awesome-icon icon="fa-brands fa-telegram" size="2x"/>
           </a>
-          <a href="https://hh.ru/resume/222787aaff0bb781a30039ed1f534877545331">HH</a>
+          <a href="https://hh.ru/resume/222787aaff0bb781a30039ed1f534877545331" class="hh">HH</a>
           <a href="https://github.com/Eelllllyy">
-            <font-awesome-icon icon="fa-brands fa-github" />
+            <font-awesome-icon icon="fa-brands fa-github" size="2x"/>
           </a>
           <a href="https://www.linkedin.com/in/elina-rezenkova-743b9b258/">
-            <font-awesome-icon icon="fa-brands fa-linkedin" /> 
+            <font-awesome-icon icon="fa-brands fa-linkedin" size="2x"/> 
           </a>
           <a href="mailto:r-elina-r@yandex.ru">
-            <font-awesome-icon icon="fa-regular fa-envelope" />
+            <font-awesome-icon icon="fa-regular fa-envelope" size="2x"/>
           </a> 
         </div>
         <img src='@/modules/Cards/assets/avatar.jpeg' class="my-image">
       </div>
     </article>
-</transition>
+  </transition>
   </main>
 </template>
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, onUpdated } from 'vue';
 const nasaVis = ref(false)
 const minosVis = ref(false)
 const airbnbVis = ref(false)
 const cardsVis = ref(false)
 const userVis = ref(false)
-
 const openPlanet = (planet) => {
   switch(planet){
     case 'mercury': {
@@ -157,9 +150,14 @@ const openPlanet = (planet) => {
 }
 onMounted(() => {
     if(window.innerWidth < 500){
-      window.moveTo(90, 90)
+      window.moveTo(100, 100)
     }
   })
+onUpdated(() => {
+  if(window.innerWidth < 500){
+      window.moveTo(100, 100)
+    }
+})
 const nasaPortal = {
   title: 'Nasa portal',
   description: 'Корпоративный портал для сотрудников, в котором реализована аутентификация с помощью JWT, а так же восстановление пароля через почту.На данном портале есть возможность оставить заявку на различные услуги, начиная от обращения к шефу и заканчивая заявлением на отпуск.Можно просматривать список сотрудников, который я реализовала в двух вариациях: c обычной пагинацией; c пагинацией в виде инфинити скролл.',
@@ -188,7 +186,6 @@ const cards = {
   realization: 'Проект реализован с помощью Vue 3, composition API , vue-router, WebSocket',
   git: 'https://github.com/Eelllllyy/cards'
 }
-
 const arr = [nasaPortal, minos, airbnClone, cards]
 </script>
 <style scoped>
@@ -196,7 +193,6 @@ const arr = [nasaPortal, minos, airbnClone, cards]
 .fade-leave-active {
   transition: opacity 0.7s ease;
 }
-
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
@@ -243,8 +239,8 @@ img{
 }
 .cross-button{
   background: url(@/modules/Cards/assets/cross.svg) center center / cover;
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   border: none;
   cursor: pointer;
 }
@@ -261,7 +257,6 @@ p{
 a{
   text-decoration: none;
   color:black;
-  /* font-size:10%; */
   font-family: 'CotlinC';
 }
 .galaxy{
@@ -423,6 +418,10 @@ a{
     transform: rotate(0);
   }
 }
+.hh{
+  font-size: 20px;
+  font-weight: 700;
+}
 .star{
   position: fixed;
   width: 30px;
@@ -494,15 +493,17 @@ a{
 }
 .text-git{
   display: inline-block;
+
 }
 .card-content{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 .ident{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  margin-right: 31px;
 }
 .my-image{
   width: 70%;
@@ -562,18 +563,18 @@ a{
     top: 100%;
     transform: rotate(0);
   }
-}
+  }
 }
 @media(max-width: 1250px){
   .galaxy-content{
     width: 430px;
     height: 430px;
-}
+  }
   .earth{
     width: 170px;
     height: 170px;
   animation: earthAction 62s linear infinite;
-}
+  }
   .venera{
     width: 120px;
     height: 120px;
@@ -587,18 +588,18 @@ a{
   .mars{
     width: 105px;
     height: 105px;
-}
+  }
 }
 @media(max-width: 900px){
   .galaxy-content{
     width: 430px;
     height: 430px;
-}
+  }
   .earth{
     top: 50%;
     right: 84%;
     animation: galaxyRotate-73691448 45s linear infinite
-}
+  }
   .venera{
     top: 16%;
     right: 54%;
@@ -653,11 +654,11 @@ a{
   .galaxy-content{
     width: 430px;
     height: 430px;
-}
+  }
   .earth{
     top: 62%;
     right: 82%;
-}
+  }
   .venera{
     top: 11%;
     right: 54%;
@@ -669,7 +670,7 @@ a{
   .mars{
     top: 70%;
     right: 25%;
-}
+  }
 .card, .card-about-me{
   width: auto;
 }
@@ -681,11 +682,11 @@ p{
   .galaxy-content {
     width: 289px;
     height: 289px;
-}
-.earth{
-  top: 62%;
-  right: 74%;
-}
+  }
+  .earth{
+    top: 62%;
+    right: 74%;
+  }
   .venera{
     top: 6%;
     right: 55%;
@@ -697,22 +698,22 @@ p{
   .mars{
     top: 85%;
     right: 25%;
-}
-.one{
+  }
+  .one{
     top: 31vw;
     left: 28vh;
-}
-.eleven{
+  }
+  .eleven{
     bottom: 52vw;
     left: 49vw;
-}
-.three{
+  }
+  .three{
     bottom: 29vw;
     left: 11vh;
-}
-.five{
+  }
+  .five{
     top: 94vw;
     right: 40vh;
-}
+  }
 }
 </style>

@@ -68,7 +68,6 @@
   top: 4vw;
   right: 35vw; 
 }
-
 @keyframes starAnimate{
   from {
     opacity: 1;
