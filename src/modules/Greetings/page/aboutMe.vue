@@ -124,6 +124,23 @@ h1{
   justify-content: center;
   align-items: center;
   z-index: 5;
-
+}
+@media(max-width:1400px){
+  h1{
+    font-size:3em ;
+  }
+}
+@media(max-width:900px){
+  h1{
+    font-size:4em ;
+  }
+  .greetings-container {
+    width: 90vw;
+  }
+}
+@media(max-width: 500px){
+  h1{
+    font-size:2em ;
+  }
 }
 </style>
