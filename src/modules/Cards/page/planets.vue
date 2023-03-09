@@ -109,7 +109,7 @@
   </main>
 </template>
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 const nasaVis = ref(false)
 const minosVis = ref(false)
 const airbnbVis = ref(false)
@@ -153,9 +153,13 @@ const openPlanet = (planet) => {
       airbnbVis.value = false
       nasaVis.value = false
     }; break
-
   }
 }
+onMounted(() => {
+    if(window.innerWidth < 500){
+      window.moveTo(90, 90)
+    }
+  })
 const nasaPortal = {
   title: 'Nasa portal',
   description: 'Корпоративный портал для сотрудников, в котором реализована аутентификация с помощью JWT, а так же восстановление пароля через почту.На данном портале есть возможность оставить заявку на различные услуги, начиная от обращения к шефу и заканчивая заявлением на отпуск.Можно просматривать список сотрудников, который я реализовала в двух вариациях: c обычной пагинацией; c пагинацией в виде инфинити скролл.',
@@ -606,10 +610,44 @@ a{
     animation: galaxyRotate-73691448 45s linear infinite
   }
   .mars{
-    top: 94%;
+    top: 89%;
     right: 34%;
     animation: galaxyRotate-73691448 45s linear infinite
-}
+  }
+  .five{
+    top: 33vw;
+    right: 25vh;
+  }
+  .seven{
+    top: 46vw;
+    right: 68vw;
+  }
+  .four{
+    top: 73vw;
+    left: 23vh;
+  }
+  .twelve{
+    bottom: 17vw;
+    left: 80vw;
+  }
+  .eleven{
+    bottom: 29vw;
+    left: 49vw;
+  }
+  .ten{
+    top: 15vw;
+    right: 0vw;
+  }
+  .star{
+    width: 15px;
+    height: 15px;
+  }
+  .card{
+    width: 60%;
+  }
+  .card-about-me{
+    width: 50%;
+  }
 }
 @media(max-width: 500px){
   .galaxy-content{
@@ -629,8 +667,14 @@ a{
     right: 0%;
   }
   .mars{
-    top: 94%;
+    top: 70%;
     right: 25%;
+}
+.card, .card-about-me{
+  width: auto;
+}
+p{
+  font-size: 16px;
 }
 }
 @media(max-width: 400px){
@@ -651,8 +695,24 @@ a{
     right: 0%;
   }
   .mars{
-    top: 91%;
+    top: 85%;
     right: 25%;
+}
+.one{
+    top: 31vw;
+    left: 28vh;
+}
+.eleven{
+    bottom: 52vw;
+    left: 49vw;
+}
+.three{
+    bottom: 29vw;
+    left: 11vh;
+}
+.five{
+    top: 94vw;
+    right: 40vh;
 }
 }
 </style>
