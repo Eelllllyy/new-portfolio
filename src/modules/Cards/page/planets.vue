@@ -1,17 +1,17 @@
 <template>
   <main>
-    <div class="star one"></div>
-    <div class="star two"></div>
-    <div class="star three"></div>
-    <div class="star four"></div>
-    <div class="star five"></div>
-    <div class="star six"></div>
-    <div class="star seven"></div>
-    <div class="star eight"></div>
-    <div class="star nine"></div>
-    <div class="star ten"></div>
-    <div class="star eleven"></div>
-    <div class="star twelve"></div>
+    <div class="star one" style="--i:0;"></div>
+    <div class="star two" style="--i:1;"></div>
+    <div class="star three" style="--i:0;"></div>
+    <div class="star four" style="--i:3;"></div>
+    <div class="star five" style="--i:1;"></div>
+    <div class="star six" style="--i:5;"></div>
+    <div class="star seven" style="--i:6;"></div>
+    <div class="star eight" style="--i:3;"></div>
+    <div class="star nine" style="--i:2;"></div>
+    <div class="star ten" style="--i:3;"></div>
+    <div class="star eleven" style="--i:4;"></div>
+    <div class="star twelve" style="--i:5;"></div>
     <article class="galaxy">
       <div class="galaxy-content" @click = "openPlanet('sun')"></div>
     </article>
@@ -430,7 +430,7 @@ a{
   filter: drop-shadow(0 0 25px rgb(255, 230, 8));
   animation: starAnimate 1.2s linear infinite;
   opacity: 1;
-  animation-delay: calc(0.5s * var(--i));
+  animation-delay: calc(0.2s * var(--i));
   animation-direction: alternate
 }
 .two{
