@@ -671,12 +671,17 @@ a{
     top: 70%;
     right: 25%;
   }
-.card, .card-about-me{
-  width: auto;
-}
-p{
-  font-size: 16px;
-}
+  .card, .card-about-me{
+    width: auto;
+    margin: 8px;
+    padding-top:20px;
+  }
+  p{
+    font-size: 15px;
+  }
+  .text-realize{
+    padding: 0;
+  }
 }
 @media(max-width: 400px){
   .galaxy-content {
