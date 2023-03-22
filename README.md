@@ -10,7 +10,6 @@ https://eelllllyy.github.io/portfolio/#/
 ![#](https://github.com/Eelllllyy/portfolio/blob/main/src/screenshots/1.png)
 ![#](https://github.com/Eelllllyy/portfolio/blob/main/src/screenshots/2.png)
 ![#](https://github.com/Eelllllyy/portfolio/blob/main/src/screenshots/3.png)
-![#](https://github.com/Eelllllyy/portfolio/blob/main/src/screenshots/ipad.png)
 
 _Creation date:_
 >10 / 03 / 2023
